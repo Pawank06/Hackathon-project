@@ -1,2 +1,3 @@
-print("our project")
-print("omkar")
+print("our project") 
+print("project")
+
