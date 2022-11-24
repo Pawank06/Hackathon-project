@@ -1,3 +1,4 @@
+
 import time
 import psutil
 from plyer import notification
@@ -6,6 +7,8 @@ print("Started....")
 
 cBatteryPercent = 0
 pBatteryPercent = 0
+
+#This is code the for battery remainde
 
 if psutil.sensors_battery().power_plugged: #If charging is active
     pBatteryPercent = 0
@@ -19,4 +22,5 @@ if psutil.sensors_battery().power_plugged: #If charging is active
             notification.notify(title = title, message = message)
             pBatteryPercent = cBatteryPercent + 1
         time.sleep(1)
+
 
