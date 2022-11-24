@@ -18,5 +18,19 @@ if psutil.sensors_battery().power_plugged: #If charging is active
             message = f'Your current battery percent is {CurrentBatteryPercent}'
             notification.notify(title = title, message = message)
             pBatteryPercent = cBatteryPercent + 1
-        time.sleep(1)
-
+        time.sleep(5)
+while(True):
+    battery = psutil.sensors_battery()
+    percent = battery.percent
+     
+    notification.notify(
+        title="Battery Percentage",
+        message=str(percent)+"% Battery remaining",
+        timeout=10
+    )
+     
+    # after every 60 mins it will show the
+    # battery percentage
+    #time.sleep(5)
+     
+    continue
